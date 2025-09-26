@@ -1,4 +1,4 @@
-package MVCObserver;
+package MVCDirect;
 
 import javax.swing.*;
 
@@ -7,7 +7,7 @@ public class Main {
         Model model = new Model();
         Controller controller = new Controller(model);
         View view = new View(model, controller);
-        model.addObserver(view);
+        controller.setView(view);
         SwingUtilities.invokeLater(() -> {
             view.setVisible(true);
         });

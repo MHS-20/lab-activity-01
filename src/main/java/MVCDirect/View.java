@@ -1,4 +1,4 @@
-package MVCObserver;
+package MVCDirect;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,14 +7,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class View extends JFrame implements ActionListener, Observer {
+public class View extends JFrame implements ActionListener {
 
     Controller controller;
+    Model model;
 
     public View(Model m, Controller c){
         super("My BBoM App");
 
         this.controller = c;
+        //this.model = m;
 
         setSize(300, 70);
         setResizable(false);
@@ -40,8 +42,8 @@ public class View extends JFrame implements ActionListener, Observer {
         controller.increment();
     }
 
-    public void update(int state) {
-        System.out.println("State value: " + state);
+    public void update(int value) {
+        System.out.println("State value: " + value);
     }
 
 }
