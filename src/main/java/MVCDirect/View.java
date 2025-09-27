@@ -16,7 +16,7 @@ public class View extends JFrame implements ActionListener {
         super("My BBoM App");
 
         this.controller = c;
-        //this.model = m;
+        this.model = m;
 
         setSize(300, 70);
         setResizable(false);
@@ -42,8 +42,7 @@ public class View extends JFrame implements ActionListener {
         controller.increment();
     }
 
-    public void update(int value) {
-        System.out.println("State value: " + value);
+    public void update() {
+        System.out.println("State value: " + model.getState());
     }
-
 }

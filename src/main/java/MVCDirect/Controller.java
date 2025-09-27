@@ -15,6 +15,6 @@ public class Controller {
 
     public void increment(){
         model.incrementState();
-        view.update(model.getState());
+        view.update();
     }
 }
