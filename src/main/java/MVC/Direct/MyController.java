@@ -3,13 +3,13 @@ package MVC.Direct;
 public class MyController implements common.Controller {
 
     private Model model;
-    private InputGUIView view;
+    private MyView view;
 
     public MyController(Model m){
         this.model = m;
     }
 
-    public void setView(InputGUIView v){
+    public void setView(MyView v){
         this.view = v;
     }
 

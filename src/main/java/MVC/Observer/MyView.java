@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class InputGUIView extends JFrame implements ActionListener, Observer, common.View {
+public class MyView extends JFrame implements ActionListener, Observer, common.View {
 
     Controller controller;
     Model model;
 
-    public InputGUIView(Model m, Controller c){
+    public MyView(Model m, Controller c){
         super("My BBoM App");
 
         this.controller = c;

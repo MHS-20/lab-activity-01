@@ -1,8 +1,8 @@
-package Extensions.Observer;
+package Extensions.Direct;
 
 import javax.swing.*;
 
-public class OutputGUIView extends JFrame implements Observer, common.View {
+public class OutputGUIView extends JFrame implements common.View {
     private JLabel counterLabel;
     private Model model;
 

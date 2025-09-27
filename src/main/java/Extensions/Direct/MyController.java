@@ -1,20 +1,25 @@
 package Extensions.Direct;
 
+import common.View;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyController implements common.Controller {
 
     private Model model;
-    private InputGUIView view;
+    private List<View> views = new ArrayList<>();
 
     public MyController(Model m){
         this.model = m;
     }
 
-    public void setView(InputGUIView v){
-        this.view = v;
+    public void setView(View v){
+        this.views.add(v);
     }
 
     public void increment(){
         model.incrementState();
-        view.update();
+        views.forEach(View::update);
     }
 }
