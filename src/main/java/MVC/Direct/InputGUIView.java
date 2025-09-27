@@ -1,4 +1,4 @@
-package MVCDirect;
+package MVC.Direct;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class View extends JFrame implements ActionListener {
+public class InputGUIView extends JFrame implements ActionListener, common.View {
 
-    Controller controller;
+    MyController controller;
     Model model;
 
-    public View(Model m, Controller c){
+    public InputGUIView(Model m, MyController c){
         super("My BBoM App");
 
         this.controller = c;

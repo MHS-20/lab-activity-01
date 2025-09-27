@@ -1,6 +1,6 @@
-package MVCObserver;
+package Extensions.Observer;
 
-public class Controller {
+public class Controller implements common.Controller {
     private Model model;
 
     public Controller(Model m){

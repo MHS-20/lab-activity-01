@@ -1,10 +1,10 @@
-package MVCObserver;
+package MVC.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 interface Observer {
-    void update(int value);
+    void update();
 }
 
 public class Model {
@@ -34,7 +34,7 @@ public class Model {
 
     private void notifyObservers() {
         for (Observer obs : observers) {
-            obs.update(state);
+            obs.update();
         }
     }
 }

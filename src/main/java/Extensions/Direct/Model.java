@@ -1,4 +1,4 @@
-package MVCDirect;
+package Extensions.Direct;
 
 public class Model {
     int state;
