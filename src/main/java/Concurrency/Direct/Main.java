@@ -1,4 +1,4 @@
-package MVC.Observer;
+package Concurrency.Direct;
 
 import javax.swing.*;
 
@@ -7,7 +7,10 @@ public class Main {
         Model model = new Model();
         MyController controller = new MyController(model);
         MyView view = new MyView(model, controller);
-        model.addObserver(view);
+
+        controller.setView(view);
+        controller.start();
+
         SwingUtilities.invokeLater(() -> {
             view.setVisible(true);
         });

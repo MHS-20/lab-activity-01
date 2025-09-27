@@ -1,4 +1,4 @@
-package MVC.Observer;
+package Concurrency.Direct;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class MyView extends JFrame implements ActionListener, Observer, common.View {
+public class MyView extends JFrame implements ActionListener, common.View {
 
     MyController controller;
     Model model;
@@ -45,5 +45,4 @@ public class MyView extends JFrame implements ActionListener, Observer, common.V
     public void update() {
         System.out.println("State value: " + model.getState());
     }
-
 }

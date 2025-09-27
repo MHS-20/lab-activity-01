@@ -1,4 +1,4 @@
-package MVC.Observer;
+package Concurrency.Observer;
 
 import javax.swing.*;
 import java.awt.*;

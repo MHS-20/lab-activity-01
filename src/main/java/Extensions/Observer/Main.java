@@ -7,7 +7,7 @@ public class Main {
         Model model = new Model();
         Controller controller = new Controller(model);
 
-        InputGUIView inputView = new InputGUIView(model, controller);
+        MyView inputView = new MyView(model, controller);
         OutputGUIView outputView = new OutputGUIView(model);
 
         model.addObserver(inputView);

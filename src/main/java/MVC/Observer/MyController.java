@@ -1,9 +1,9 @@
 package MVC.Observer;
 
-public class Controller implements common.Controller {
+public class MyController implements common.Controller {
     private Model model;
 
-    public Controller(Model m){
+    public MyController(Model m){
         this.model = m;
     }
 

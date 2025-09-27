@@ -1,4 +1,4 @@
-package Extensions.Observer;
+package Extensions.Direct;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class InputGUIView extends JFrame implements ActionListener, Observer, common.View {
+public class MyView extends JFrame implements ActionListener, common.View {
 
-    Controller controller;
+    MyController controller;
     Model model;
 
-    public InputGUIView(Model m, Controller c){
+    public MyView(Model m, MyController c){
         super("My BBoM App");
 
         this.controller = c;
@@ -45,5 +45,4 @@ public class InputGUIView extends JFrame implements ActionListener, Observer, co
     public void update() {
         System.out.println("State value: " + model.getState());
     }
-
 }
