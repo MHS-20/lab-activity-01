@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class MyView extends JFrame implements ActionListener {
+public class MyView extends JFrame implements ActionListener, common.View {
 
     int state;
 

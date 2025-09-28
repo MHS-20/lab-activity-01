@@ -5,25 +5,6 @@ public class Model {
 
     public Model(){
         state = 0;
-
-        new Thread(() -> {
-            try {
-                RabbitMQUtil.setup();
-                RabbitMQUtil.consumeMessages((consumerTag, delivery) -> {
-                    String message = new String(delivery.getBody(), "UTF-8");
-                    if ("increment".equals(message)) {
-                        incrementState();
-                        try {
-                            RabbitMQUtil.sendMessage("state:" + state);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }).start();
     }
 
     public void incrementState() {
